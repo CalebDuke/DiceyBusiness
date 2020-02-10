@@ -1,0 +1,47 @@
+/* .square {
+    margin: 10px;
+    border: thick solid black;
+    height: 100px;
+    width: 100px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: coral;
+    font-size: 5.5em;
+    font-weight: 900;
+
+} */
+
+.id-display {
+    display: flex;
+    flex-wrap: wrap ;
+    display: none;
+    color: black;
+    
+}
+
+.square:hover .id-display {
+    display: block;
+}
+
+
+.container {
+    
+   
+}
+.box{
+    margin: 10px;
+    border: thick solid black;
+    height: 100px;
+    width: 100px;
+    display: flex;  
+    /* flex-wrap: wrap;
+    justify-content: center; */
+    color: coral;
+    font-size: 5.5em;
+    font-weight: 900;
+    display: inline-block;
+    float: left;
+}
+

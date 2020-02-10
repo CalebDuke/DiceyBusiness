@@ -1,31 +1,82 @@
-GamepadButton.addEventListener('click', function(){
-//element creation
-let box = document.createElement('div');
-let boxText = document.createTextNode(counter);
-//attributes
-box.className = 'box';
-box.id = counter;
+document.addEventListener("DOMContentLoaded", function () {
 
+    const button = document.createElement('button');
+    button.textContent = 'Add a DIE';
+    const reRoll = document.createElement('button');
+    reRoll.textContent = 'Reroll Dice';
+    const sum = document.createElement('button');
+    sum.textContent = 'Sum Dice'
+    const container = document.createElement('main');
+    container.className = 'container';
 
-//events
-
-})
-
-
-
-    class Die {
-        constructor(){
+    let sumArray = []
+   let a = sumArray.valueOf()
+   
+    
+    
+    document.body.appendChild(sum);
+    document.body.appendChild(reRoll);
+    document.body.appendChild(button);
+    document.body.appendChild(container);
+    
+    
+    let counter = Math.floor((Math.random() * 5) + 1);
+    
+    class Box {
+        constructor() {
             this.div = document.createElement('div');
             this.value = document.createTextNode(counter);
-            console.log(this);
-        }   
-    }
+            this.div.className = 'box';
+            this.div.id = counter;
+            container.appendChild(this.div)
+            this.div.appendChild(this.value);
+            sumArray.push(this.value) 
 
-    new Die()
+                    
+        }
 
-// }
-// You must use OOP. Create a class named Die that represents a single die.
-// Your class must have a property named value.
-// Your class must have a method named roll that generates a random integer 1-6, sets the value property, and updates the div on the page with the new value.
-// When a new Die is created, it should automatically create a div, call its roll method, and put the div on the screen
-// You can use either the DOM or JQuery, but please be consistent and stick with one.
+            }
+            
+            sum.addEventListener('click', function() {
+                alert(a)
+                
+            })
+            
+            button.addEventListener('click', function () {
+                new Box();
+                counter = Math.floor((Math.random() * 5) + 1)
+                counter++
+        // counter++;
+        // let box = document.createElement('div');
+        // box.className = 'square';
+        // box.id = counter;
+        
+      
+
+        // box.appendChild(idDisplay);
+
+        
+
+    //     box.addEventListener('dblclick', function () {
+    //         if (box.id % 2 === 0) {
+    //             if (document.body.contains(box.nextSibling)) {
+    //                 box.nextSibling.remove()
+    //             } else {
+    //                 alert("aint no box")
+    //             }
+    //         } else {
+    //             if (document.body.contains(box.previousSibling)) {
+    //                 box.previousSibling.remove()
+    //             } else {
+    //                 alert("aint no box")
+    //             }
+    //         }
+    //     })
+
+    });
+
+
+
+
+
+});
